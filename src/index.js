@@ -11,11 +11,11 @@ import { createStore, applyMiddleware } from 'redux';
 // rootReducer from ./reducers
 import thunk from 'redux-thunk';
 import logger from 'redux-logger';
-import starWarsReducer from './reducers';
+import charsReducer from './reducers';
 // import index from './reducers';
 
-// const middleware = applyMiddleware(thunk, logger);
-const store = createStore(starWarsReducer, applyMiddleware(thunk, logger));
+
+const store = createStore(charsReducer, applyMiddleware(thunk, logger));
 
 ReactDOM.render(
   <Provider store={store}>
